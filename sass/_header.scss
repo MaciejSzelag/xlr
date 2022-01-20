@@ -1,0 +1,456 @@
+.greeting {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 10000;
+    transition: 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-family: 'Roboto', sans-serif;
+
+
+
+    .greeting-h {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: none;
+        color: white;
+        font-size: 5rem;
+        opacity: 0;
+        text-transform: uppercase;
+        // transition: .5s ease-in-out;
+    }
+
+    .greeting-h-active {
+        animation: show-greeting .8s linear 1 both;
+
+    }
+
+    .greeting-h-active:nth-child(odd) {
+
+        color: crimson;
+    }
+
+}
+
+
+
+header {
+    width: 100%;
+    background-color: rgba(23, 23, 23, 0.9);
+
+}
+
+.front-header {
+    background-image: url(../images/black-and-white-back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    animation: kenburns-left 60s ease-out infinite both;
+
+    .header-logo {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(23, 23, 23, 0.9);
+        // transition: 0.5s ease-in-out;
+
+        .img-wrap {
+            visibility: hidden;
+        }
+
+        .letter,
+        .sub-title,
+        .circle {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+            animation: flicker-in-1 2s linear both;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 both;
+        }
+
+        // .circle {
+        //     top: 53%;
+        //     width: 90%;
+        //     height: 38%;
+        //     border: 5px solid white;
+        //     border-radius: 50%;
+        //     z-index: 4;
+        // }
+
+
+        .letter {
+            top: 50%;
+            width: auto;
+            height: auto;
+
+
+
+
+        }
+
+        .letter-1 {
+            font-size: 39rem;
+            z-index: 8;
+            transform: translate(-54%, -52%);
+            font-family: 'Cormorant Garamond', serif;
+            animation-delay: 5.8s;
+        }
+
+        .letter-2 {
+            font-size: 39rem;
+            z-index: 9;
+            transform: translate(-32%, -45%);
+            animation-delay: 6.5s;
+        }
+
+        .letter-3 {
+            font-size: 18rem;
+            z-index: 10;
+            transform: translate(-50%, -33%);
+            animation-delay: 7.2s;
+        }
+
+        .sub-title {
+            font-size: 3rem;
+            text-align: center;
+            font-family: 'Kaushan Script', cursive;
+            z-index: 5;
+        }
+
+        .sub-title-top {
+            top: 20%;
+            animation-delay: 5.6s;
+        }
+
+        .sub-title-top-top {
+            width: 100%;
+            top: 5%;
+            font-size: 4rem;
+            animation-delay: 6s;
+
+        }
+
+        .sub-title-bottom {
+            top: 80%;
+            animation-delay: 6.5s;
+        }
+
+        .top-big {
+            // display: flex;
+            font-size: 5rem;
+            color: crimson;
+            // color: rgb(204, 0, 0);
+            text-shadow: 0 0 2px white;
+
+        }
+    }
+}
+
+.full-screen {
+    height: 100vh;
+}
+
+@media (min-width:1024px) {
+    .greeting {
+
+        .greeting-h {
+            font-size: 10vw;
+        }
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .front-header {
+
+
+
+        .header-logo {
+            // max-width: 1920px;
+
+            .img-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 40rem;
+                height: 60rem;
+                // border: 1px solid white;
+                visibility: visible;
+                z-index: 2;
+                overflow: hidden;
+                transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                filter: grayscale(100%);
+                animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+                img {
+                    width: 100%;
+                    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    opacity: .8;
+
+                }
+            }
+
+            .img-1 {
+                top: 15%;
+                left: 5%;
+                // clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+                animation-delay: 9s;
+            }
+
+            .img-2 {
+                top: 25%;
+                right: 5%;
+                animation-delay: 10s;
+                // img {
+                //     animation-duration: 25s;
+                // }
+            }
+
+            .img-wrap:hover {
+                transform: scale(1.1);
+                // filter: drop-shadow(0 0 10px white);
+
+                img {
+                    width: 140%;
+                    opacity: 1;
+
+                }
+            }
+
+            .letter-1 {
+                font-size: 41rem;
+                z-index: 10;
+                transform: translate(-117%, -45%);
+                font-family: 'Cormorant Garamond', serif;
+            }
+
+            .letter-2 {
+                font-size: 55rem;
+
+            }
+
+            .letter-3 {
+                font-size: 30rem;
+                z-index: 10;
+                transform: translate(0%, -33%);
+
+            }
+
+            .sub-title {
+                font-size: 2.7rem;
+
+            }
+
+            .sub-title-top {
+                top: 40%;
+                left: 38%;
+
+            }
+
+            .sub-title-bottom {
+                top: 42%;
+                left: 59%;
+
+            }
+        }
+    }
+
+
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-1-15 22:18:28
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * @animation flicker-in-1
+ * ----------------------------------------
+ */
+@keyframes flicker-in-1 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    10.1% {
+        opacity: 1;
+    }
+
+    10.2% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    20.1% {
+        opacity: 1;
+    }
+
+    20.6% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    30.1% {
+        opacity: 1;
+    }
+
+    30.5% {
+        opacity: 1;
+    }
+
+    30.6% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    45.1% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    55.1% {
+        opacity: 0;
+    }
+
+    57% {
+        opacity: 0;
+    }
+
+    57.1% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    60.1% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    65.1% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    75.1% {
+        opacity: 0;
+    }
+
+    77% {
+        opacity: 0;
+    }
+
+    77.1% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    85.1% {
+        opacity: 0;
+    }
+
+    86% {
+        opacity: 0;
+    }
+
+    86.1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes kenburns-left {
+    0% {
+        background-size: 200%;
+    }
+
+    50% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 200%;
+    }
+}
+
+@keyframes fade-in-bck {
+    0% {
+        // transform: translate(80px);
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        // transform: translateY(0);
+        width: 40rem;
+        opacity: 1;
+    }
+}
+
+@keyframes show-greeting {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

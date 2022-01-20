@@ -1,0 +1,28 @@
+.scroll-top {
+    @include flex-center;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 2px black);
+    font-size: 1rem;
+    transition: .7s linear;
+
+}
+
+.scroll-top:hover {
+
+
+    border: 1px solid rgba(255, 255, 255, 0.021);
+
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
+    background-color: white;
+    color: black;
+
+
+
+
+}
